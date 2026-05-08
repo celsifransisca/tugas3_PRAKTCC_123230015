@@ -1,12 +1,11 @@
 // Alamat backend API kamu
-const apiBase = "http://localhost:3000/notes";
+const apiBase = "https://be-rest-203664327381.us-central1.run.app/notes";
 
-// Saat web pertama kali dibuka, langsung ambil data catatan
 document.addEventListener("DOMContentLoaded", () => {
   getNotes();
 });
 
-// Menangkap form saat tombol simpan diklik
+
 const formulir = document.querySelector("#note-form");
 
 formulir.addEventListener("submit", async (e) => {
