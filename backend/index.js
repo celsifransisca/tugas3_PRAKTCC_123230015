@@ -9,11 +9,16 @@ app.use(express.json());
 
 
 
-// Root endpoint
 app.get("/", (req, res) => {
-  res.send("Backend Notes API berjalan!");
-});
+  db.query(
+    'SELECT * FROM notes ORDER BY tanggal_dibuat DESC',
+    (err, results) => {
+      if (err) return res.status(500).send(err);
 
+      res.json(results);
+    }
+  );
+});
 
 
 // GET semua notes
