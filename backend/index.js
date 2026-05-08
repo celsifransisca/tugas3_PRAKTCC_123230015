@@ -9,6 +9,14 @@ app.use(express.json());
 
 
 
+// Root endpoint
+app.get("/", (req, res) => {
+  res.send("Backend Notes API berjalan!");
+});
+
+
+
+// GET semua notes
 app.get('/notes', (req, res) => {
   db.query(
     'SELECT * FROM notes ORDER BY tanggal_dibuat DESC',
@@ -22,6 +30,7 @@ app.get('/notes', (req, res) => {
 
 
 
+// POST tambah note
 app.post('/notes', (req, res) => {
   const { judul, isi } = req.body;
 
@@ -42,6 +51,7 @@ app.post('/notes', (req, res) => {
 
 
 
+// PUT update note
 app.put('/notes/:id', (req, res) => {
   const { judul, isi } = req.body;
   const id = req.params.id;
@@ -61,6 +71,7 @@ app.put('/notes/:id', (req, res) => {
 
 
 
+// DELETE note
 app.delete('/notes/:id', (req, res) => {
   const id = req.params.id;
 
