@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplikasi Notes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">   
+    <h1>🌸 Aplikasi Notes Harian 🌸</h1>
+
+    <form id="note-form" class="form-section">
+      <div class="input-group">
+        <label for="judul">Judul Catatan</label>
+        <input type="text" id="judul" placeholder="Masukkan judul..." required>
+      </div>
+      
+      <div class="input-group">
+        <label for="isi">Isi Catatan</label>
+        <textarea id="isi" rows="4" placeholder="Tulis catatanmu di sini..." required></textarea>
+      </div>
+
+      <button type="submit" id="btn-simpan">Tambah Catatan</button>
+    </form>
+
+    <hr class="divider">
+
+    <div class="list-section">
+      <h2>Daftar Catatan</h2>
+      <table class="notes-table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Judul</th>
+            <th>Isi</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="table-notes"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

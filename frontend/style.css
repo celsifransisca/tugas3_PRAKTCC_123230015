@@ -1,0 +1,125 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff0f5; /* LavenderBlush - Pink Soft */
+  color: #4a4a4a;
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 800px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.4); /* Bayangan bernuansa pink */
+}
+
+h1 {
+  color: #d81b60; 
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+h2 {
+  color: #ec407a;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+/* Pengaturan Form */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+  color: #d81b60;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #f8bbd0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #f06292;
+  box-shadow: 0 0 5px rgba(240, 98, 146, 0.5);
+}
+
+/* Pengaturan Tombol Simpan */
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#btn-simpan {
+  background-color: #f06292; /* Pink terang */
+  color: white;
+  align-self: flex-start;
+}
+
+#btn-simpan:hover {
+  background-color: #d81b60; /* Pink lebih gelap saat di-hover */
+}
+
+/* Garis Pemisah */
+.divider {
+  border: none;
+  border-top: 2px dashed #f8bbd0;
+  margin: 30px 0;
+}
+
+/* Pengaturan Tabel Daftar Catatan */
+.notes-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.notes-table th, .notes-table td {
+  border: 1px solid #fce4ec;
+  padding: 12px;
+  text-align: left;
+}
+
+.notes-table th {
+  background-color: #fce4ec;
+  color: #d81b60;
+}
+
+/* Tombol Edit & Hapus */
+.btn-edit {
+  background-color: #ffb74d; /* Orange muda */
+  color: white;
+  padding: 6px 12px;
+  margin-right: 5px;
+}
+
+.btn-edit:hover { background-color: #f57c00; }
+
+.btn-hapus {
+  background-color: #ef5350; /* Merah muda */
+  color: white;
+  padding: 6px 12px;
+}
+
+.btn-hapus:hover { background-color: #c62828; }
+
