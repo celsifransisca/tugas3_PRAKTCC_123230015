@@ -2,9 +2,9 @@
   "name": "frontend",
   "version": "1.0.0",
   "scripts": {
-    "start": "npx serve ."
+    "start": "serve -s ."
   },
   "dependencies": {
-    "serve": "^14.2.4"
+    "serve": "^14.2.1"
   }
 }
