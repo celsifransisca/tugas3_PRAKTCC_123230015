@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   getNotes();
 });
 
-
+// Menangkap form saat tombol simpan diklik
 const formulir = document.querySelector("#note-form");
 
 formulir.addEventListener("submit", async (e) => {
