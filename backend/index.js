@@ -8,8 +8,14 @@ app.use(cors());
 app.use(express.json());
 
 
-
+// ROOT
 app.get("/", (req, res) => {
+  res.send("Backend Notes API berjalan!");
+});
+
+
+// GET semua notes
+app.get('/notes', (req, res) => {
   db.query(
     'SELECT * FROM notes ORDER BY tanggal_dibuat DESC',
     (err, results) => {
@@ -18,12 +24,6 @@ app.get("/", (req, res) => {
       res.json(results);
     }
   );
-});
-
-
-// GET semua notes
-app.get("/", (req, res) => {
-  res.send("Backend Notes API berjalan!");
 });
 
 
@@ -47,7 +47,6 @@ app.post('/notes', (req, res) => {
 });
 
 
-
 // PUT update note
 app.put('/notes/:id', (req, res) => {
   const { judul, isi } = req.body;
@@ -67,7 +66,6 @@ app.put('/notes/:id', (req, res) => {
 });
 
 
-
 // DELETE note
 app.delete('/notes/:id', (req, res) => {
   const id = req.params.id;
@@ -84,7 +82,6 @@ app.delete('/notes/:id', (req, res) => {
     }
   );
 });
-
 
 
 const PORT = process.env.PORT || 5000;
