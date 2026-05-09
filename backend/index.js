@@ -22,17 +22,9 @@ app.get("/", (req, res) => {
 
 
 // GET semua notes
-app.get('/notes', (req, res) => {
-  db.query(
-    'SELECT * FROM notes ORDER BY tanggal_dibuat DESC',
-    (err, results) => {
-      if (err) return res.status(500).send(err);
-
-      res.json(results);
-    }
-  );
+app.get("/", (req, res) => {
+  res.send("Backend Notes API berjalan!");
 });
-
 
 
 // POST tambah note
